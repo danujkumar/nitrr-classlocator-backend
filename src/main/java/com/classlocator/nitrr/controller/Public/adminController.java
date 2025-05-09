@@ -77,4 +77,15 @@ public class adminController extends controller {
         }
     }
 
+    /** */
+    @PostMapping("/verify-otp")
+    public ResponseEntity<?> otpVerification(@RequestBody Map<String, String> entity) {
+        //TODO: process POST request
+        String token = entity.get("otpToken");
+        String received = entity.get("otp");
+        // Perform OTP verification logic here
+
+        return new ResponseEntity<>("OTP verified successfully", HttpStatus.OK);
+    }
+    
 }

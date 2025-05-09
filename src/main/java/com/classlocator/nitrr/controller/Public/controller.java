@@ -13,6 +13,7 @@ import com.classlocator.nitrr.entity.searchTool;
 import com.classlocator.nitrr.interfaces.Pair;
 import com.classlocator.nitrr.services.adminService;
 import com.classlocator.nitrr.services.jwtService;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @RestController
 public class controller {
@@ -106,4 +107,12 @@ public class controller {
         return new ResponseEntity<>(admins.getAllQueries(authentication.getName()), HttpStatus.OK);
     }
 
+    /**  */
+    @PostMapping("otp-generate/{rollno}")
+    public ResponseEntity<?> otpGenerate(@PathVariable Integer rollno) {
+        //TODO: process POST request
+        
+        return ResponseEntity.ok("OTP generated successfully");
+    }
+    
 }

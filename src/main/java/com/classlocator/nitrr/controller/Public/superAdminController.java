@@ -82,4 +82,12 @@ public class superAdminController extends controller {
         }
     }
 
+    /** */
+    @PostMapping("/verify-otp")
+    public String otpVerification(@RequestBody String entity) {
+        //TODO: process POST request
+        
+        return entity;
+    }
+
 }

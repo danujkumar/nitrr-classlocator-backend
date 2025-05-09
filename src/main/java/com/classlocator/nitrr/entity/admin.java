@@ -43,6 +43,11 @@ public class admin {
     @NonNull
     private String password;
 
+    /** Email address of the admin (Non-null). */
+    // @NonNull
+    // @Indexed(unique = true)
+    // private String email;
+
     /** Name of the admin. */
     @Builder.Default
     private String name = "NA";
